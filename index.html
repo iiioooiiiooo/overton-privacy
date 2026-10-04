@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Overton Browser Shield</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+         line-height: 1.6; margin: 0; padding: 40px 20px; background: #f6f7f9; color: #1f2430; }
+  main { max-width: 820px; margin: 0 auto; background: #fff; border-radius: 12px;
+         padding: 40px 44px; box-shadow: 0 1px 4px rgba(20,24,40,.08); }
+  h1 { font-size: 26px; margin: 0 0 4px; }
+  .date { color: #6b7280; font-size: 14px; margin-bottom: 28px; }
+  h2 { font-size: 18px; margin: 30px 0 8px; }
+  ul { padding-left: 22px; }
+  li { margin: 6px 0; }
+  a { color: #5b4be0; }
+  footer { max-width: 820px; margin: 18px auto 0; color: #6b7280; font-size: 13px; text-align: center; }
+  @media (prefers-color-scheme: dark) {
+    body { background: #14161c; color: #e6e8ee; }
+    main { background: #1c1f27; box-shadow: none; }
+    .date, footer { color: #9aa1b2; }
+    a { color: #9d92ff; }
+  }
+</style>
+</head>
+<body>
+<main>
+<h1>Privacy Policy for Overton Browser Shield</h1>
+<div class="date">Last updated: October 3, 2026</div>
+
+<h2>1. Overview</h2>
+<p>Overton Browser Shield is a browser extension that provides proxy controls inside Google Chrome. The extension works only inside the browser and is not a system-wide VPN for the entire device.</p>
+
+<h2>2. Data We Process</h2>
+<p>The extension may process the following data:</p>
+<ul>
+<li><strong>Anonymous install ID:</strong> a random extension installation identifier created locally in the browser. It is used to provide a trial period without Telegram authorization.</li>
+<li><strong>Subscription token:</strong> a token used to verify active access and retrieve the list of proxy servers.</li>
+<li><strong>Extension settings:</strong> theme, auto-connect, kill switch, WebRTC setting, split tunneling mode, excluded/included domains, and (if added) a custom proxy together with its routing.</li>
+<li><strong>Technical connection data:</strong> selected proxy server, connection status, and session start time.</li>
+<li><strong>Custom proxy (experimental):</strong> the address and the list of user-added proxies (including login/password if entered) are stored locally in chrome.storage.local, used only to configure Chrome proxy settings and to test connectivity, and are never sent to Overton servers. During a connectivity test the extension temporarily routes a request to www.cloudflare.com/cdn-cgi/trace through the tested proxy to determine the exit IP, then immediately restores the previous proxy settings.</li>
+<li><strong>Telegram profile data, if the user signs in through the Telegram bot:</strong> name, username, and subscription status.</li>
+<li><strong>Public IP address and country code:</strong> shown in the popup so the user can verify the connection. They are requested from www.cloudflare.com/cdn-cgi/trace (fallback: api.ipify.org), displayed locally, and are not stored or linked to the account.</li>
+<li><strong>Connectivity check:</strong> the extension periodically requests https://www.gstatic.com/generate_204 to verify that the proxy connection works. No personal data is sent with this request.</li>
+</ul>
+<p>The extension does not collect page contents, passwords, messages, banking data, or user files, and it does not store, analyze, or sell your browsing history. Destination domains are processed only in memory while routing traffic and answering proxy authentication requests, and this information is not retained as history.</p>
+
+<h2>3. How We Use Data</h2>
+<p>Data is used only to operate the service:</p>
+<ul>
+<li>provide a 2-day trial period;</li>
+<li>verify active subscription status;</li>
+<li>connect the browser to Overton proxy/VPN servers;</li>
+<li>automatically provide proxy authentication credentials;</li>
+<li>save extension settings;</li>
+<li>notify about subscription expiration;</li>
+<li>support WebRTC calls when this option is enabled.</li>
+</ul>
+
+<h2>4. Traffic Routing</h2>
+<p>When VPN is enabled, browser network traffic may pass through Overton proxy/VPN servers. While traffic is routed, the extension and the selected server necessarily process the destination domains and IP addresses of requests in order to deliver them; this information is used only for routing and is not stored as browsing history. If the user has added a custom proxy (experimental), traffic may pass through that user-provided proxy. The extension works only inside Chrome and does not route traffic from other applications on the device.</p>
+<p>If WebRTC is enabled, WebRTC/UDP connections, including Discord and other calling services, may work directly and may reveal the real IP address. This setting is provided for call compatibility.</p>
+
+<h2>5. Data Storage</h2>
+<p>Some data is stored locally in the browser using chrome.storage.local. Overton servers store data required for subscriptions, trial access, access verification, and technical operation of the service.</p>
+
+<h2>6. Third Parties</h2>
+<p>We do not sell users' personal data. Data may be processed by third-party services only when necessary to operate the service, such as Telegram for bot authorization and support, payment providers for subscription payments, and infrastructure providers for server hosting.</p>
+
+<h2>7. Data Deletion</h2>
+<p>Users can delete local extension data by removing the extension from the browser. To request deletion of server-side data, contact Overton support.</p>
+
+<h2>8. Security</h2>
+<p>We take reasonable technical measures to protect data and access to proxy/VPN servers. However, no method of transmission or storage can be guaranteed to be completely secure.</p>
+
+<h2>9. Limited Use Disclosure</h2>
+<p>Overton Browser Shield complies with the Chrome Web Store Limited Use requirements:</p>
+<ul>
+<li>User data is used only to provide or improve this extension's single purpose: configuring and maintaining the browser's proxy connection.</li>
+<li>User data is not sold, and is not transferred to third parties except where necessary to provide the service, to comply with applicable laws, for security purposes, or as part of a merger, acquisition, or sale of assets.</li>
+<li>User data is never used to serve personalized, retargeted, or interest-based advertising.</li>
+<li>User data is not read by humans, except with the user's consent (for example, support requests), where necessary for security purposes, to comply with applicable laws, or when aggregated and anonymized for internal operations.</li>
+</ul>
+
+<h2>10. Contact</h2>
+<p>Support: <a href="https://t.me/Rerererkd" target="_blank" rel="noopener">https://t.me/Rerererkd</a><br>
+Telegram bot: <a href="https://t.me/OvertonVPNBot" target="_blank" rel="noopener">https://t.me/OvertonVPNBot</a></p>
+</main>
+<footer>Overton Browser Shield — Chrome extension privacy policy</footer>
+</body>
+</html>
